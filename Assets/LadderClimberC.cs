@@ -41,7 +41,7 @@ public class LadderClimberC : MonoBehaviour {
 	}
 
     public void Update() {
-		Debug.Log ("Self is " + selfTransform);
+		//Debug.Log ("Self is " + selfTransform);
 		Vector3 direction = selfTransform.forward;
 		//Ok, we have direction, lets normalize it! Calc 3 stuff!
 		//Oh wait, unity has this built in.
@@ -53,7 +53,7 @@ public class LadderClimberC : MonoBehaviour {
 			rotateObjectIntoCurrent(obj);
 			//Move it forward here
 			obj.transform.Translate(movementVector,Space.World);
-			Debug.Log (selfTransform.forward + "    " + obj.transform.forward);
+			//Debug.Log (selfTransform.forward + "    " + obj.transform.forward);
 
 
 		}
