@@ -74,14 +74,19 @@ public var _updateCounter:int;
 public var _activeChildren:int;
 
 //CUSTOM
-private var _proportionChinook:float = 0.9;
+private var _numFishPerSchool:int[] = [100, 80];
+private var _proportionChinook:float[] = [0.9, 0.1];
 private var waypoint:GameObject;
+private var yearsFromStart:int = 0;
 
 function Start () {
 	waypoint = GameObject.FindWithTag ("Waypoint");
 	_posBuffer = transform.position + _posOffset;
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
-	AddFish(_childAmount);
+	_childAmount = _numFishPerSchool[0];
+	var numChinook:int = _childAmount * _proportionChinook[0]; //often off by one, who cares
+	AddFish(numChinook, 0);
+	AddFish(_childAmount - numChinook, 1);
 	Invoke("AutoRandomWaypointPosition", RandomWaypointTime());
 }
 
@@ -94,7 +99,7 @@ function Update () {
 		}else{
 			_newDelta = Time.deltaTime;
 		}
-		UpdateFishAmount();
+		// UpdateFishAmount();
 	}
 }
 
@@ -110,21 +115,21 @@ function InstantiateGroup(){
 	g.name = transform.name + " Fish Container";
 }
 
-function AddFish(amount:int){
+function AddFish(amount:int, type:int){
 	if(_groupChildToNewTransform)InstantiateGroup();	
 	for(var i:int=0;i<amount;i++){
-		var randomVal:float = Random.Range(0.0,1.0);
-		var child:int;
-		if (randomVal < _proportionChinook) {
-			child = 0;
-		} else {
-			child = 1;
-		}
-		var obj : SchoolChild = Instantiate(_childPrefab[child]);		
+		instantiateFish(0);
+	}
+	for(;i<amount;i++){
+		instantiateFish(1);
+	}
+}
+
+function instantiateFish(fishPos:int) {
+		var obj : SchoolChild = Instantiate(_childPrefab[fishPos]);		
 	    obj._spawner = this;
 	    _roamers.Add(obj);
 		AddChildToParent(obj.transform);
-	}	
 }
 
 function AddChildToParent(obj:Transform){	
@@ -144,6 +149,7 @@ function RemoveFish(amount:int){
 	Destroy(dObj.gameObject);
 }
 
+/**
 function UpdateFishAmount(){
 	if(_childAmount>= 0 && _childAmount < _roamers.Count){
 		RemoveFish(1);
@@ -154,6 +160,7 @@ function UpdateFishAmount(){
 		return;
 	}
 }
+*/
 
 //Set waypoint randomly inside box
 function SetRandomWaypointPosition() {
