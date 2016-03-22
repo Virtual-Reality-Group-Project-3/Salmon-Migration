@@ -72,8 +72,8 @@ function FrameSkipSeedInit(){
 }
 
 function CheckForBubblesThenInvoke() {
-	if(_spawner._bubbles)
-		InvokeRepeating("EmitBubbles", (_spawner._bubbles._emitEverySecond*Random.value)+1 , _spawner._bubbles._emitEverySecond);	
+	if(_spawner._bubbles){}
+		//InvokeRepeating("EmitBubbles", (_spawner._bubbles._emitEverySecond*Random.value)+1 , _spawner._bubbles._emitEverySecond);	
 }
 
 function EmitBubbles(){

@@ -73,7 +73,12 @@ public var _newDelta:float;
 public var _updateCounter:int;
 public var _activeChildren:int;
 
+//CUSTOM
+private var _proportionChinook:float = 0.9;
+private var waypoint:GameObject;
+
 function Start () {
+	waypoint = GameObject.FindWithTag ("Waypoint");
 	_posBuffer = transform.position + _posOffset;
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
 	AddFish(_childAmount);
@@ -108,7 +113,13 @@ function InstantiateGroup(){
 function AddFish(amount:int){
 	if(_groupChildToNewTransform)InstantiateGroup();	
 	for(var i:int=0;i<amount;i++){
-		var child:int = Random.Range(0,_childPrefab.length);
+		var randomVal:float = Random.Range(0.0,1.0);
+		var child:int;
+		if (randomVal < _proportionChinook) {
+			child = 0;
+		} else {
+			child = 1;
+		}
 		var obj : SchoolChild = Instantiate(_childPrefab[child]);		
 	    obj._spawner = this;
 	    _roamers.Add(obj);
@@ -148,9 +159,12 @@ function UpdateFishAmount(){
 function SetRandomWaypointPosition() {
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
 	var t:Vector3;
+	/*
 	t.x = Random.Range(-_positionSphere, _positionSphere) + transform.position.x;
 	t.z = Random.Range(-_positionSphereDepth, _positionSphereDepth) + transform.position.z;
 	t.y = Random.Range(-_positionSphereHeight, _positionSphereHeight) + transform.position.y;
+	*/
+	t = waypoint.transform.position;
 	_posBuffer = t;	
 	if(_forceChildWaypoints){
 		for (var i:int = 0; i < _roamers.Count; i++) {
