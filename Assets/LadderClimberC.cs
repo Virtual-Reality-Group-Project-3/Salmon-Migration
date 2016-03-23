@@ -10,11 +10,13 @@ public class LadderClimberC : MonoBehaviour {
 	//Above two vars control how fast the fish bobs arounds in water in this stream;
 	public HashSet<GameObject> salmonSet = new HashSet<GameObject> ();
 
+	public bool invertDirection = false;
+
     public void Start() {
 		selfTransform = this.GetComponent<Transform>();
     }
     public void OnTriggerEnter(Collider collider) {
-		Debug.Log ("Entered " + collider.gameObject.name);
+		//Debug.Log ("Entered " + collider.gameObject.name + " Tagged with " + collider.gameObject.tag);
 		if (collider.gameObject.CompareTag ("salmon")) {
 			salmonSet.Add (collider.gameObject);
 			if (disableGravityUponEnter) {
@@ -33,10 +35,14 @@ public class LadderClimberC : MonoBehaviour {
     }
 
 	private void rotateObjectIntoCurrent(GameObject obj) {
-		if (obj.transform.forward == selfTransform.forward) {
+		Vector3 forward = selfTransform.forward;
+		if (invertDirection) { 
+			forward = -forward;
+		}
+		if (obj.transform.forward == forward) {
 			return;
 		}
-		obj.transform.forward = obj.transform.forward + ((selfTransform.forward-obj.transform.forward) * Time.deltaTime*rotationSpeed);
+		obj.transform.forward = obj.transform.forward + ((forward-obj.transform.forward) * Time.deltaTime*rotationSpeed);
 
 	}
 
@@ -47,8 +53,14 @@ public class LadderClimberC : MonoBehaviour {
 		//Oh wait, unity has this built in.
 		direction.Normalize();
 		Vector3 movementVector = direction * Time.deltaTime * speed;
+		if (invertDirection) {
+			movementVector = -movementVector;
+		}
 
 		foreach ( GameObject obj in salmonSet ) {
+			if (disableGravityUponEnter) {
+				obj.GetComponent<Rigidbody> ().useGravity = false;
+			}
 			//obj.transform.
 			rotateObjectIntoCurrent(obj);
 			//Move it forward here
