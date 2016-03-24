@@ -74,7 +74,7 @@ public var _updateCounter:int;
 public var _activeChildren:int;
 
 //CUSTOM
-private var waypoint:GameObject;
+private var waypoint:GameObject = null;
 
 function Start () {
 	var fc:FishAmountController = FindObjectOfType(typeof(FishAmountController));
@@ -116,11 +116,7 @@ function InstantiateGroup(){
 function AddFish(amount:int, type:int){
 	if(_groupChildToNewTransform)InstantiateGroup();	
 	for(var i:int=0;i<amount;i++){
-		Debug.Log("making fish");
-		instantiateFish(0);
-	}
-	for(;i<amount;i++){
-		instantiateFish(1);
+		instantiateFish(type);
 	}
 }
 
@@ -163,8 +159,10 @@ function UpdateFishAmount(){
 
 //Set waypoint randomly inside box
 function SetRandomWaypointPosition() {
-	if (!waypoint)
+	while (!waypoint) {
+		Debug.Log(waypoint);
 		waypoint = GameObject.FindWithTag ("Waypoint");
+	}
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
 	var t:Vector3;
 	/*

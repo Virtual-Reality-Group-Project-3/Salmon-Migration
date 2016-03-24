@@ -116,7 +116,7 @@ MonoBehaviour:
   _positionSphereHeight: 0
   _childTriggerPos: 1
   _forceChildWaypoints: 1
-  _autoRandomPosition: 0
+  _autoRandomPosition: 1
   _forcedRandomDelay: 2
   _schoolSpeed: 0
   _roamers: []
