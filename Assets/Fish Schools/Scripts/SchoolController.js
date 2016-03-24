@@ -74,17 +74,15 @@ public var _updateCounter:int;
 public var _activeChildren:int;
 
 //CUSTOM
-private var _numFishPerSchool:int[] = [100, 80];
-private var _proportionChinook:float[] = [0.9, 0.1];
 private var waypoint:GameObject;
-private var yearsFromStart:int = 0;
 
 function Start () {
-	waypoint = GameObject.FindWithTag ("Waypoint");
+	var fc:FishAmountController = FindObjectOfType(typeof(FishAmountController));
 	_posBuffer = transform.position + _posOffset;
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
-	_childAmount = _numFishPerSchool[0];
-	var numChinook:int = _childAmount * _proportionChinook[0]; //often off by one, who cares
+
+	_childAmount = fc.numFishPerSchool[fc.yearsFromStart];
+	var numChinook:int = _childAmount * fc.proportionChinook[fc.yearsFromStart]; //often off by one, who cares
 	AddFish(numChinook, 0);
 	AddFish(_childAmount - numChinook, 1);
 	Invoke("AutoRandomWaypointPosition", RandomWaypointTime());
@@ -118,6 +116,7 @@ function InstantiateGroup(){
 function AddFish(amount:int, type:int){
 	if(_groupChildToNewTransform)InstantiateGroup();	
 	for(var i:int=0;i<amount;i++){
+		Debug.Log("making fish");
 		instantiateFish(0);
 	}
 	for(;i<amount;i++){
@@ -164,6 +163,8 @@ function UpdateFishAmount(){
 
 //Set waypoint randomly inside box
 function SetRandomWaypointPosition() {
+	if (!waypoint)
+		waypoint = GameObject.FindWithTag ("Waypoint");
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
 	var t:Vector3;
 	/*

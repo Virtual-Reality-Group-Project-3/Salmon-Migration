@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 205.20682, y: 34.7, z: 271.6054}
+  m_LocalPosition: {x: 140, y: 41.6, z: 233.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -77,9 +77,9 @@ MonoBehaviour:
   _groupTransform: {fileID: 0}
   _groupName: 
   _groupChildToSchool: 0
-  _childAmount: 325
+  _childAmount: 82
   _spawnSphere: 5
-  _spawnSphereDepth: 3
+  _spawnSphereDepth: 5
   _spawnSphereHeight: 5
   _childSpeedMultipler: 0.71
   _minSpeed: 7
@@ -100,8 +100,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _minScale: 0.5
-  _maxScale: 1
+  _minScale: 1
+  _maxScale: 2
   _minDamping: 1
   _maxDamping: 0.5
   _waypointDistance: 0.67
@@ -111,16 +111,16 @@ MonoBehaviour:
   _randomPositionTimerMin: 1
   _acceleration: 0.025
   _brake: 0.01
-  _positionSphere: 50
-  _positionSphereDepth: 5
-  _positionSphereHeight: 30
+  _positionSphere: 0
+  _positionSphereDepth: 0
+  _positionSphereHeight: 0
   _childTriggerPos: 1
   _forceChildWaypoints: 1
   _autoRandomPosition: 0
   _forcedRandomDelay: 2
   _schoolSpeed: 0
   _roamers: []
-  _posBuffer: {x: 205.20682, y: 34.7, z: 271.6054}
+  _posBuffer: {x: 140.1, y: 41.6, z: 233.4}
   _posOffset: {x: 0, y: 0, z: 0}
   _avoidance: 0
   _avoidAngle: 0.35
@@ -130,7 +130,7 @@ MonoBehaviour:
   _stopSpeedMultiplier: 2
   _avoidanceMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   _push: 0
   _pushDistance: 0
   _pushForce: 5
@@ -1626,7 +1626,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 140
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
