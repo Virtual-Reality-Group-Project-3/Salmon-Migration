@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472f3f11c26cbd54397d8e7c32ccaad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpMagnitude: 2
+  jumpMagnitude: 6
 --- !u!137 &13759738
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -502,7 +502,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: jumpMagnitude
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 126900}
