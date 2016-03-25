@@ -190,13 +190,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400024}
-  - 114: {fileID: 11474320}
-  - 65: {fileID: 6539754}
-  - 54: {fileID: 5435370}
-  - 114: {fileID: 11466824}
+  - 54: {fileID: 5463548}
+  - 65: {fileID: 6538430}
+  - 114: {fileID: 11403764}
   m_Layer: 0
-  m_Name: Chinook
-  m_TagString: fish from school
+  m_Name: Ladder Climbing Other
+  m_TagString: salmon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,13 +362,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 353.3399, y: 80.81, z: 295.08163}
+  m_LocalPosition: {x: 348.80133, y: 82.71, z: 294.9748}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!54 &5435370
+--- !u!54 &5463548
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -379,23 +378,23 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6539754
+--- !u!65 &6538430
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.5, y: 0.7, z: 2.3}
+  m_Center: {x: -0.1, y: 0.1, z: -0.4}
 --- !u!111 &11100000
 Animation:
   m_ObjectHideFlags: 1
@@ -411,7 +410,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
---- !u!114 &11466824
+--- !u!114 &11403764
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -419,25 +418,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d320973760f684f815f5e6ff18d9b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 472f3f11c26cbd54397d8e7c32ccaad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ladderClimberPrefab: {fileID: 126900, guid: b6f57e353d7285f43aa8683dc1f3fb6e, type: 2}
---- !u!114 &11474320
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01b67c8c535019d47ba387e88bd5adcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawner: {fileID: 0}
-  _speed: 10
-  _scanner: {fileID: 400026, guid: a1240cfbc0dcb3547948a1ca58b82cb0, type: 2}
-  _cacheTransform: {fileID: 0}
+  jumpMagnitude: 2
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -448,7 +432,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 69064b8055aaf03488dd3ebc4d7b573e, type: 2}
+  - {fileID: 2100000, guid: bcc18c3118f99194bb3058757a07c01e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -493,10 +477,6 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: m_Name
-      value: Chinook
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
       propertyPath: _scanner
       value: 
       objectReference: {fileID: 400026, guid: a1240cfbc0dcb3547948a1ca58b82cb0, type: 2}
@@ -514,24 +494,36 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
-      value: fish from school
+      value: salmon
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_IsTrigger
-      value: 1
+      propertyPath: jumpMagnitude
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_UseGravity
-      value: 0
+      propertyPath: m_Size.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_IsKinematic
-      value: 0
+      propertyPath: m_Size.y
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: ladderClimberPrefab
-      value: 
-      objectReference: {fileID: 126900, guid: b6f57e353d7285f43aa8683dc1f3fb6e, type: 2}
+      propertyPath: m_Size.z
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.z
+      value: -0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100024}
