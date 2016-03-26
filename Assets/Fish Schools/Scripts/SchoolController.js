@@ -80,11 +80,12 @@ function Start () {
 	var fc:FishAmountController = FindObjectOfType(typeof(FishAmountController));
 	_posBuffer = transform.position + _posOffset;
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
-
 	_childAmount = fc.numFishPerSchool[fc.yearsFromStart];
 	var numChinook:int = _childAmount * fc.proportionChinook[fc.yearsFromStart]; //often off by one, who cares
-	AddFish(numChinook, 0);
-	AddFish(_childAmount - numChinook, 1);
+	if (fc.chinookEnabled)
+		AddFish(numChinook, 0);
+	if (fc.otherEnabled)
+		AddFish(_childAmount - numChinook, 1);
 	Invoke("AutoRandomWaypointPosition", RandomWaypointTime());
 }
 
@@ -174,7 +175,9 @@ function SetRandomWaypointPosition() {
 	_posBuffer = t;	
 	if(_forceChildWaypoints){
 		for (var i:int = 0; i < _roamers.Count; i++) {
-  		 	(_roamers[i] as SchoolChild).Wander(Random.value*_forcedRandomDelay);
+			if (_roamers[i] != null) {
+  		 		(_roamers[i] as SchoolChild).Wander(Random.value*_forcedRandomDelay);
+  		 	}
 		}	
 	}
 }
