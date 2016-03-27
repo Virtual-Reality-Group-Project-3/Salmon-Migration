@@ -32,7 +32,7 @@ function Start(){
 	//Check if there is a controller attached
 	if(!_cacheTransform) _cacheTransform = transform;
 	if(_spawner){	
-		SetRandomScale();			
+		//SetRandomScale();			
 		LocateRequiredChildren();
 	    RandomizeStartAnimationFrame();
 	    SkewModelForLessUniformedMovement();
@@ -117,6 +117,7 @@ function SkewModelForLessUniformedMovement () {
 
 function SetRandomScale(){
 	var sc:float = Random.Range(_spawner._minScale, _spawner._maxScale);
+	//var sc:float = _spawner._minScale;
 	_cacheTransform.localScale=Vector3.one*sc;
 }
 

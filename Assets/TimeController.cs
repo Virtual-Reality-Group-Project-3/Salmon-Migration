@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿/**
+ * Now handled in FishAmountController
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -94,3 +96,4 @@ public class TimeController : MonoBehaviour {
 		control.otherEnabled = otherEnabled;
 	}
 }
+**/

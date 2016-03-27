@@ -75,9 +75,11 @@ public var _activeChildren:int;
 
 //CUSTOM
 private var waypoint:GameObject = null;
+private var fc:FishAmountController;
+
 
 function Start () {
-	var fc:FishAmountController = FindObjectOfType(typeof(FishAmountController));
+	fc = FindObjectOfType(typeof(FishAmountController));
 	_posBuffer = transform.position + _posOffset;
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
 	_childAmount = fc.numFishPerSchool[fc.yearsFromStart];
@@ -122,10 +124,15 @@ function AddFish(amount:int, type:int){
 }
 
 function instantiateFish(fishPos:int) {
-		var obj : SchoolChild = Instantiate(_childPrefab[fishPos]);		
-	    obj._spawner = this;
-	    _roamers.Add(obj);
-		AddChildToParent(obj.transform);
+	var obj : SchoolChild = Instantiate(_childPrefab[fishPos]);
+	if (fishPos == 0) {
+		obj.transform.localScale=Vector3.one*(1+fc.yearsFromStart*.025);	
+	} else {
+		obj.transform.localScale=Vector3.one*(1-fc.yearsFromStart*.025);
+	}
+    obj._spawner = this;
+    _roamers.Add(obj);
+	AddChildToParent(obj.transform);
 }
 
 function AddChildToParent(obj:Transform){	
