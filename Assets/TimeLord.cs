@@ -7,6 +7,7 @@ public class TimeLord : MonoBehaviour {
 	public float maxTimeScale = 6.0f;
 	public float minTimeScale = 0.0f;
 	public float incrementAmount = .5f;
+	public bool timeChanged = false;
 	// Use this for initialization
 	private float previousDpad;
 	void Start () {
@@ -38,5 +39,6 @@ public class TimeLord : MonoBehaviour {
 			timeScale = Mathf.Max (minTimeScale, timeScale);
 			Time.timeScale = timeScale;
 		}
+		timeChanged = (increase || decrease);
 	}
 }

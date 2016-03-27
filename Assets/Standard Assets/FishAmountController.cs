@@ -10,8 +10,8 @@ public class FishAmountController : MonoBehaviour {
 	public int yearsFromStart = 0;
 	public bool chinookEnabled = true;
 	public bool otherEnabled = true;
+	public bool displayHUD = false;
 	public GameObject schoolToCopy;
-	public string[] timeControlKeys = { "z", "x", "c", "v" };
 	private GameObject school = null;
 	private WaveState previousState = null;
 	private int secondsPerWave = 20;
@@ -24,18 +24,24 @@ public class FishAmountController : MonoBehaviour {
 		InvokeRepeating ("DecrementTime", 0, 1);
 	}
 	void Update() {
-		if (Input.GetKeyDown (timeControlKeys[0]) || CrossPlatformInputManager.GetButtonDown ("Toggle Chinook")) {
+		bool changingValues = false;
+		if (Input.GetKeyDown ("z") || CrossPlatformInputManager.GetButtonDown ("Toggle Chinook")) {
 			chinookEnabled = !chinookEnabled;
+			changingValues = true;
 		}
-		if (Input.GetKeyDown (timeControlKeys[1]) || CrossPlatformInputManager.GetButtonDown ("Toggle Other")) {
+		if (Input.GetKeyDown ("x") || CrossPlatformInputManager.GetButtonDown ("Toggle Other")) {
 			otherEnabled = !otherEnabled;
+			changingValues = true;
 		}
-		if (Input.GetKeyDown (timeControlKeys[2]) || CrossPlatformInputManager.GetButtonDown ("Time Backward")) {
+		if (Input.GetKeyDown ("c") || CrossPlatformInputManager.GetButtonDown ("Time Backward")) {
 			ChangeYear (-1);
+			changingValues = true;
 		}
-		if (Input.GetKeyDown (timeControlKeys[3]) || CrossPlatformInputManager.GetButtonDown ("Time Forward") ) {
+		if (Input.GetKeyDown ("v") || CrossPlatformInputManager.GetButtonDown ("Time Forward") ) {
 			ChangeYear (1);
+			changingValues = true;
 		}
+		displayHUD = changingValues;
 	}
 	private void SpawnSchool() {
 		++waveNum;
@@ -71,7 +77,7 @@ public class FishAmountController : MonoBehaviour {
 	}
 
 	public string GetCurrentState() {
-		return string.Format("{0}{1}{2}\n{3}s", GetCurrentYear(), chinookEnabled ? ", CHINOOK" : "", otherEnabled ? ", OTHER" : "", secondsUntilNextWave);
+		return string.Format("{0}{1}{2}\n{3}s", GetCurrentYear(), chinookEnabled ? " CHINOOK" : "                 ", otherEnabled ? " OTHER" : "", secondsUntilNextWave);
 	}
 }
 
@@ -86,6 +92,6 @@ class WaveState {
 		this.otherEnabled = otherEnabled;
 	}
 	public override string ToString() {
-		return string.Format("{0}{1}{2}", year, chinookEnabled ? ", CHINOOK" : "", otherEnabled ? ", OTHER" : "");
+		return string.Format("{0}{1}{2}", year, chinookEnabled ? " CHINOOK" : "                 ", otherEnabled ? " OTHER" : "");
 	}
 }
