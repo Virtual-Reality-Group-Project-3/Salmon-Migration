@@ -48,6 +48,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			if (clampVerticalRotation) {
 				m_CameraTargetRot = ClampRotationAroundXAxis (m_CameraTargetRot);
 			}
+		
 			if (clampHorizontalRotation) {
 				m_CharacterTargetRot = ClampRotationAroundYAxis (m_CharacterTargetRot);
 			}

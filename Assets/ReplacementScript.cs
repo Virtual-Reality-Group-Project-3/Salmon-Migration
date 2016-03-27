@@ -20,12 +20,12 @@ public class ReplacementScript : MonoBehaviour {
 		++spawned;
 		Transform fishTransform; 
 		if (collider.gameObject.CompareTag ("fish from school")) {
-			Debug.Log ("Destroying! " + collider.gameObject.name);
+			//Debug.Log ("Destroying! " + collider.gameObject.name);
 			fishTransform = collider.gameObject.transform;
 			Destroy (collider.gameObject);
 
 			GameObject newFish = Instantiate(collider.gameObject.GetComponent<GetLadderClimber> ().getLadderCLimber ());
-			Debug.Log (newFish.name);
+//			Debug.Log (newFish.name);
 			newFish.transform.position = fishTransform.position;
 			newFish.transform.rotation = fishTransform.rotation;
 			newFish.transform.localScale = fishTransform.localScale;

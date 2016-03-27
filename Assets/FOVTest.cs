@@ -1,18 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class FOVTest : MonoBehaviour {
 
 	// Use this for initialization
-	public int setFovTo = 40;
-	public Camera cam;
+	public float FOV = 45;
+	public float ZoomSpeed = 1;
+	public int minFov = 22;
+	public int maxFov = 90;
+	private Camera cam;
 	void Start () {
 		cam = GetComponent<Camera> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		cam.fieldOfView = setFovTo;
+		float x = CrossPlatformInputManager.GetAxis ("Vertical");
+		FOV -= x * ZoomSpeed;
+		FOV = Mathf.Min (maxFov, FOV);
+		FOV = Mathf.Max (minFov, FOV);
+		cam.fieldOfView = FOV;
 
 	}
 }
