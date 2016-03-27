@@ -5750,7 +5750,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1001002605}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000028212997}
-  m_LocalPosition: {x: 351.05, y: 36.57, z: 284.22}
+  m_LocalPosition: {x: 351.78, y: 36.79, z: 284.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6577,7 +6577,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1045249958}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000028212997}
-  m_LocalPosition: {x: 351.05, y: 69.97, z: 284.22}
+  m_LocalPosition: {x: 351.78, y: 70.19, z: 284.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12195,7 +12195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1935120770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13378,6 +13378,7 @@ GameObject:
   - 114: {fileID: 2041592756}
   - 114: {fileID: 2041592755}
   - 114: {fileID: 2041592754}
+  - 114: {fileID: 2041592760}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -13553,6 +13554,19 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!114 &2041592760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041592752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94db501b60e1767438a2e151d67b4baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setFovTo: 40
+  cam: {fileID: 0}
 --- !u!1 &2043994554
 GameObject:
   m_ObjectHideFlags: 0
@@ -13842,7 +13856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2068084505
 Transform:
   m_ObjectHideFlags: 0
