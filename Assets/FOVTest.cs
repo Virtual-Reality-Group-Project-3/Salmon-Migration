@@ -21,6 +21,10 @@ public class FOVTest : MonoBehaviour {
 		FOV = Mathf.Min (maxFov, FOV);
 		FOV = Mathf.Max (minFov, FOV);
 		cam.fieldOfView = FOV;
+		Vector3 positionTracking;
+		//positionTracking = UnityEngine.VR.InputTracking.GetLocalPosition (UnityEngine.VR.VRNode.Head);
+		//transform.localPosition = -positionTracking;
+		//transform.localPosition += new Vector3 (0, .5f, 0);
 
 	}
 }
