@@ -231,7 +231,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float oldYRotation = transform.eulerAngles.y;
 
             mouseLook.LookRotation (transform, cam.transform);
-
+			//if (transform.eulerAngles.y > 20 
             if (m_IsGrounded || advancedSettings.airControl)
             {
                 // Rotate the rigidbody velocity to match the new direction that the character is looking
