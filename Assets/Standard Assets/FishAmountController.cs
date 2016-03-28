@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class FishAmountController : MonoBehaviour {
 	public int[] numFishPerSchool = {19, 20, 36, 37, 37, 37, 33, 34, 66, 46, 59, 53, 56, 59, 94, 83, 74, 100, 40};
@@ -23,16 +24,16 @@ public class FishAmountController : MonoBehaviour {
 		InvokeRepeating ("DecrementTime", 0, 1);
 	}
 	void Update() {
-		if (Input.GetKeyDown (timeControlKeys[0])) {
+		if (Input.GetKeyDown (timeControlKeys[0]) || CrossPlatformInputManager.GetButtonDown ("Toggle Chinook")) {
 			chinookEnabled = !chinookEnabled;
 		}
-		if (Input.GetKeyDown (timeControlKeys[1])) {
+		if (Input.GetKeyDown (timeControlKeys[1]) || CrossPlatformInputManager.GetButtonDown ("Toggle Other")) {
 			otherEnabled = !otherEnabled;
 		}
-		if (Input.GetKeyDown (timeControlKeys[2])) {
+		if (Input.GetKeyDown (timeControlKeys[2]) || CrossPlatformInputManager.GetButtonDown ("Time Backward")) {
 			ChangeYear (-1);
 		}
-		if (Input.GetKeyDown (timeControlKeys[3])) {
+		if (Input.GetKeyDown (timeControlKeys[3]) || CrossPlatformInputManager.GetButtonDown ("Time Forward") ) {
 			ChangeYear (1);
 		}
 	}
