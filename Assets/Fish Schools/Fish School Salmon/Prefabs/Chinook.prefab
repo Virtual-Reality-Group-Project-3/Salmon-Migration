@@ -194,6 +194,8 @@ GameObject:
   - 65: {fileID: 6539754}
   - 54: {fileID: 5435370}
   - 114: {fileID: 11466824}
+  - 122: {fileID: 12216158}
+  - 114: {fileID: 11435248}
   m_Layer: 0
   m_Name: Chinook
   m_TagString: fish from school
@@ -411,6 +413,20 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &11435248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529b8ee29c67b2f4bb8b580e9ead0ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveNum: 0
+  controllerObject: {fileID: 0}
+  fishController: {fileID: 0}
 --- !u!114 &11466824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -438,6 +454,17 @@ MonoBehaviour:
   _speed: 10
   _scanner: {fileID: 400026, guid: a1240cfbc0dcb3547948a1ca58b82cb0, type: 2}
   _cacheTransform: {fileID: 0}
+--- !u!122 &12216158
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 1223254350
+  m_Size: 1
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

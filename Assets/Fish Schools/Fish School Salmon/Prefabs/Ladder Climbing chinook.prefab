@@ -107,8 +107,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 414020}
   - 111: {fileID: 11135936}
-  - 114: {fileID: 11437848}
-  - 122: {fileID: 12284866}
   m_Layer: 0
   m_Name: Model
   m_TagString: salmon
@@ -441,20 +439,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amplitude: 0.1
   speed: 1
---- !u!114 &11437848
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 529b8ee29c67b2f4bb8b580e9ead0ba2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveNum: 0
-  controllerObject: {fileID: 0}
-  fishController: {fileID: 0}
 --- !u!114 &11476226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -487,17 +471,6 @@ Halo:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126900}
-  m_Enabled: 1
-  m_Color:
-    serializedVersion: 2
-    rgba: 1223254350
-  m_Size: 1
---- !u!122 &12284866
-Halo:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135480}
   m_Enabled: 1
   m_Color:
     serializedVersion: 2
