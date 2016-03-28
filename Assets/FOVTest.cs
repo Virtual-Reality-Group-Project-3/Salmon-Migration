@@ -10,6 +10,7 @@ public class FOVTest : MonoBehaviour {
 	public int minFov = 22;
 	public int maxFov = 90;
 	private Camera cam;
+
 	void Start () {
 		cam = GetComponent<Camera> ();
 	}
@@ -26,5 +27,7 @@ public class FOVTest : MonoBehaviour {
 		//transform.localPosition = -positionTracking;
 		//transform.localPosition += new Vector3 (0, .5f, 0);
 
+
 	}
+
 }
