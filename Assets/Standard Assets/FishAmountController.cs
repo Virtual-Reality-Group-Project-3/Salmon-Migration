@@ -15,6 +15,7 @@ public class FishAmountController : MonoBehaviour {
 	private WaveState previousState = null;
 	private int secondsPerWave = 20;
 	private int secondsUntilNextWave;
+	public int waveNum = 0;
 	// Use this for initialization
 	void Start () {
 		SpawnSchool ();
@@ -36,6 +37,7 @@ public class FishAmountController : MonoBehaviour {
 		}
 	}
 	private void SpawnSchool() {
+		++waveNum;
 		Debug.Log ("Making school");
 		if (school != null) {
 			Destroy (school);

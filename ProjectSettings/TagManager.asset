@@ -9,6 +9,7 @@ TagManager:
   - Waypoint
   - fish from school
   - ladderstep
+  - fish controller
   layers:
   - Default
   - TransparentFX

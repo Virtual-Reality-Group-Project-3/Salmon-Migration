@@ -25,6 +25,7 @@ public class ReplacementScript : MonoBehaviour {
 			Destroy (collider.gameObject);
 
 			GameObject newFish = Instantiate(collider.gameObject.GetComponent<GetLadderClimber> ().getLadderCLimber ());
+			newFish.GetComponent<HaloManager> ().waveNum = collider.gameObject.GetComponent<HaloManager> ().waveNum;
 //			Debug.Log (newFish.name);
 			newFish.transform.position = fishTransform.position;
 			newFish.transform.rotation = fishTransform.rotation;

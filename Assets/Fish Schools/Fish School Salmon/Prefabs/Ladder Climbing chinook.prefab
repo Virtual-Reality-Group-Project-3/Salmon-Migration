@@ -57,6 +57,8 @@ GameObject:
   - 65: {fileID: 6590182}
   - 114: {fileID: 11412056}
   - 114: {fileID: 11479838}
+  - 114: {fileID: 11476226}
+  - 122: {fileID: 12243532}
   m_Layer: 0
   m_Name: Ladder Climbing chinook
   m_TagString: salmon
@@ -105,6 +107,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 414020}
   - 111: {fileID: 11135936}
+  - 114: {fileID: 11437848}
+  - 122: {fileID: 12284866}
   m_Layer: 0
   m_Name: Model
   m_TagString: salmon
@@ -437,6 +441,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amplitude: 0.1
   speed: 1
+--- !u!114 &11437848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529b8ee29c67b2f4bb8b580e9ead0ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveNum: 0
+  controllerObject: {fileID: 0}
+  fishController: {fileID: 0}
+--- !u!114 &11476226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529b8ee29c67b2f4bb8b580e9ead0ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveNum: 0
+  controllerObject: {fileID: 0}
+  fishController: {fileID: 0}
 --- !u!114 &11479838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -448,7 +480,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472f3f11c26cbd54397d8e7c32ccaad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpMagnitude: 6
+  jumpMagnitude: 10
+--- !u!122 &12243532
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126900}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 1223254350
+  m_Size: 1
+--- !u!122 &12284866
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135480}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 1223254350
+  m_Size: 1
 --- !u!137 &13759738
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -505,7 +559,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: jumpMagnitude
-      value: 6
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.rgba
+      value: 1223254350
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
