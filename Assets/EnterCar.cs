@@ -9,6 +9,7 @@ public class EnterCar : MonoBehaviour {
 	public GameObject car;
 	public GameObject cockpitRearWall;
 	public float maxExitSpeed;
+	public GameObject OriginalSpot;
 
 
 	private bool inCarView = false;
@@ -18,18 +19,27 @@ public class EnterCar : MonoBehaviour {
 
 	}
 	void toggleCarMode(bool toggle) {
+
 		player.GetComponent<TogglePlayer> ().toggle (!toggle);
 		car.GetComponent<ToggleCar> ().toggle (toggle);
 		cockpitRearWall.SetActive (toggle);
 
 
-//		Vector3 newVelocity = car.GetComponent<Rigidbody> ().velocity;
-//		if (!toggle && ((newVelocity.normalized * maxExitSpeed).magnitude < newVelocity.magnitude)) { //If we are leaving the car, slow it down.
-//			Debug.Log("Was ran");
-//			car.GetComponent<Rigidbody> ().velocity = newVelocity.normalized * maxExitSpeed;
-//			Debug.Log (car.GetComponent<Rigidbody> ().velocity);
-//		}
+		Vector3 newVelocity = car.GetComponent<Rigidbody> ().velocity;
+		if (!toggle && ((newVelocity.normalized * maxExitSpeed).magnitude < newVelocity.magnitude)) { //If we are leaving the car, slow it down.
+			Debug.Log("Was ran");
+			car.GetComponent<Rigidbody> ().velocity = newVelocity.normalized * maxExitSpeed;
+			Debug.Log (car.GetComponent<Rigidbody> ().velocity);
+		}
 		inCarView = toggle;
+		Debug.Log ("Inside? " + OriginalSpot.GetComponent<ResetToOriginalSpot>().inside + " ");
+		if (!inCarView && OriginalSpot.GetComponent<ResetToOriginalSpot> ().inside) {
+			Debug.Log ("Was ran");
+			OriginalSpot.GetComponent<ResetToOriginalSpot> ().reset (car.transform);
+			OriginalSpot.GetComponent<ResetToOriginalSpot> ().rearWall.SetActive (false);
+		} else {
+			OriginalSpot.GetComponent<ResetToOriginalSpot> ().rearWall.SetActive (true);
+		}
 
 	
 

@@ -11,13 +11,18 @@ public class ToggleCar : MonoBehaviour {
 	}
 	public void toggle(bool toggle) {
 		camera.SetActive (toggle);
-
-		this.GetComponent<CarUserControl> ().enabled = toggle;
 		if (!toggle) {
 			this.GetComponent<CarController> ().Move (0f, 0f, 0f, handBrakeVal);
 		}
-		this.GetComponent<CarController> ().enabled = toggle;
-		this.GetComponent<CarAudio> ().enabled = toggle;
+		this.GetComponent<CarUserControl> ().enabled = toggle;
+
+		//this.GetComponent<CarController> ().enabled = toggle;
+
+		//this.GetComponent<CarAudio> ().enabled = toggle;
+		//Probably best to leave these two on, only need tod isable the controller!
+		if (toggle) {
+			this.GetComponent<CarController> ().Move (0f, 0f, 0f,0f);
+		}
 
 
 
