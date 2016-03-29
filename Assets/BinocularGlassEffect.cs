@@ -14,7 +14,7 @@ public class BinocularGlassEffect : MonoBehaviour {
 	}
 	public Texture2D BinocularTexture;
 	void OnGUI() {
-		Debug.Log ("Called");
+		//Debug.Log ("Called");
 		GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), BinocularTexture);
 
 	}

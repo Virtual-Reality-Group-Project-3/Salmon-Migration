@@ -14,12 +14,12 @@ public class FishAmountController : MonoBehaviour {
 	public GameObject schoolToCopy;
 	private GameObject school = null;
 	private WaveState previousState = null;
-	private int secondsPerWave = 20;
+	private int secondsPerWave = 30;
 	private int secondsUntilNextWave;
 	public int waveNum = 0;
 	// Use this for initialization
 	void Start () {
-		SpawnSchool ();
+		previousState = new WaveState ();
 		secondsUntilNextWave = secondsPerWave;
 		InvokeRepeating ("DecrementTime", 0, 1);
 	}
@@ -85,13 +85,23 @@ class WaveState {
 	private int year;
 	private bool chinookEnabled;
 	private bool otherEnabled;
+	private bool enabled;
+
+	public WaveState() {
+		this.enabled = false;
+	}
 
 	public WaveState(int year, bool chinookEnabled, bool otherEnabled) {
 		this.year = year;
 		this.chinookEnabled = chinookEnabled;
 		this.otherEnabled = otherEnabled;
+		this.enabled = true;
 	}
 	public override string ToString() {
-		return string.Format("{0}{1}{2}", year, chinookEnabled ? " CHINOOK" : "                 ", otherEnabled ? " OTHER" : "");
+		if (enabled) {
+			return string.Format ("{0}{1}{2}", year, chinookEnabled ? " CHINOOK" : "                 ", otherEnabled ? " OTHER" : "");
+		} else {
+			return "N/A";
+		}
 	}
 }
