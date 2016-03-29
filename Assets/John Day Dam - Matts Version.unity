@@ -1293,7 +1293,7 @@ Transform:
   m_LocalScale: {x: 10.677095, y: 0.09999992, z: 9.575774}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &56974871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,7 +1325,7 @@ Transform:
   - {fileID: 750256646}
   - {fileID: 1617828672}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &84360066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,7 +1997,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
 --- !u!1001 &139119943
 Prefab:
   m_ObjectHideFlags: 0
@@ -2501,6 +2501,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 164611971}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &185050794
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 321.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 67.446
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 323.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 161420, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_Name
+      value: Walkable stairs (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &201339074
 Prefab:
   m_ObjectHideFlags: 0
@@ -3015,7 +3061,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &279560247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,7 +3337,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 92d3bf54d5ce6c04cb0b99d0c71adc6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.37
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 92d3bf54d5ce6c04cb0b99d0c71adc6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4226,7 +4272,7 @@ Transform:
   - {fileID: 916444437}
   - {fileID: 366942923}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &374854167
 GameObject:
   m_ObjectHideFlags: 0
@@ -5641,7 +5687,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &466908040
 GameObject:
   m_ObjectHideFlags: 0
@@ -7417,7 +7463,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &679320197
 GameObject:
   m_ObjectHideFlags: 0
@@ -8200,7 +8246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 24
 --- !u!1 &742203581
 GameObject:
   m_ObjectHideFlags: 0
@@ -9967,7 +10013,7 @@ Transform:
   m_Children:
   - {fileID: 809072642}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!1 &879283507
 GameObject:
   m_ObjectHideFlags: 0
@@ -10566,7 +10612,7 @@ Transform:
   m_Children:
   - {fileID: 1370823794}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &909030713
 GameObject:
   m_ObjectHideFlags: 0
@@ -12083,7 +12129,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1 &1039247157
 GameObject:
   m_ObjectHideFlags: 0
@@ -12305,12 +12351,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1040619111}
-  m_LocalRotation: {x: 0.23030831, y: 0.7691773, z: 0.4052628, w: -0.4371343}
-  m_LocalPosition: {x: 340.2372, y: 42.257797, z: 291.94046}
+  m_LocalRotation: {x: -0.131238, y: 0.5662859, z: 0.0919157, w: 0.80848527}
+  m_LocalPosition: {x: 300.64377, y: 88.391426, z: 315.17276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
 --- !u!1 &1042073206
 GameObject:
   m_ObjectHideFlags: 0
@@ -12923,6 +12969,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1069599418}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1081771212
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 317.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 65.336
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 323.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 161420, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_Name
+      value: Walkable stairs (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1088099099
 GameObject:
   m_ObjectHideFlags: 0
@@ -13999,7 +14091,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1 &1201178080
 GameObject:
   m_ObjectHideFlags: 0
@@ -14840,6 +14932,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1273349976}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1273794663
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 313.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 63.236
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 323.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 161420, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_Name
+      value: Walkable stairs (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1281914589
 Prefab:
   m_ObjectHideFlags: 0
@@ -16461,6 +16599,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1425383647}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1427004942
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 329.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 71.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 323.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 161420, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_Name
+      value: Walkable stairs (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1430589399
 GameObject:
   m_ObjectHideFlags: 0
@@ -16966,12 +17150,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1464637667}
-  m_LocalRotation: {x: 0.23030831, y: 0.7691773, z: 0.4052628, w: -0.4371343}
-  m_LocalPosition: {x: 340.2372, y: 8.857796, z: 291.94046}
+  m_LocalRotation: {x: -0.131238, y: 0.5662859, z: 0.0919157, w: 0.80848527}
+  m_LocalPosition: {x: 300.64377, y: 54.991425, z: 315.17276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &1465456042
 GameObject:
   m_ObjectHideFlags: 0
@@ -16998,7 +17182,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
 --- !u!1 &1469037955
 GameObject:
   m_ObjectHideFlags: 0
@@ -18102,7 +18286,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!1 &1576056489
 GameObject:
   m_ObjectHideFlags: 0
@@ -18992,6 +19176,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1661211389}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1661634099
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 333.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 73.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 323.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 161420, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_Name
+      value: Walkable stairs (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1661723724
 GameObject:
   m_ObjectHideFlags: 0
@@ -20602,7 +20832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1758806345
 Transform:
   m_ObjectHideFlags: 0
@@ -20858,7 +21088,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
 --- !u!1 &1789357106
 GameObject:
   m_ObjectHideFlags: 0
@@ -21130,7 +21360,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1 &1825719251
 GameObject:
   m_ObjectHideFlags: 0
@@ -21378,6 +21608,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1841934586}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1854284801
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 341.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 77.982
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 323.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 161420, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_Name
+      value: Walkable stairs
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1856140971
 GameObject:
   m_ObjectHideFlags: 0
@@ -22795,6 +23071,52 @@ Transform:
   - {fileID: 1878046760}
   m_Father: {fileID: 815822515}
   m_RootOrder: 1
+--- !u!1001 &2002424105
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 325.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 69.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 323.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 161420, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_Name
+      value: Walkable stairs (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2006755971
 GameObject:
   m_ObjectHideFlags: 0
@@ -23421,6 +23743,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2051358860}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2051965792
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 337.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 75.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 323.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465386, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 161420, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+      propertyPath: m_Name
+      value: Walkable stairs (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: efab33eb241ad1f41be594b1d974a536, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &2070555185
 Prefab:
   m_ObjectHideFlags: 0
@@ -23837,7 +24205,7 @@ Transform:
   - {fileID: 994570123}
   - {fileID: 1555768260}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &2102568949
 GameObject:
   m_ObjectHideFlags: 0
