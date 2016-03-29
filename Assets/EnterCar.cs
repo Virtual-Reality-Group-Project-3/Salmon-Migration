@@ -7,6 +7,8 @@ public class EnterCar : MonoBehaviour {
 	private GameObject player = null;
 	private bool havePlayer=false;
 	public GameObject car;
+	public GameObject cockpitRearWall;
+	public float maxExitSpeed;
 
 
 	private bool inCarView = false;
@@ -18,7 +20,18 @@ public class EnterCar : MonoBehaviour {
 	void toggleCarMode(bool toggle) {
 		player.GetComponent<TogglePlayer> ().toggle (!toggle);
 		car.GetComponent<ToggleCar> ().toggle (toggle);
+		cockpitRearWall.SetActive (toggle);
+
+
+//		Vector3 newVelocity = car.GetComponent<Rigidbody> ().velocity;
+//		if (!toggle && ((newVelocity.normalized * maxExitSpeed).magnitude < newVelocity.magnitude)) { //If we are leaving the car, slow it down.
+//			Debug.Log("Was ran");
+//			car.GetComponent<Rigidbody> ().velocity = newVelocity.normalized * maxExitSpeed;
+//			Debug.Log (car.GetComponent<Rigidbody> ().velocity);
+//		}
 		inCarView = toggle;
+
+	
 
 	}
 
