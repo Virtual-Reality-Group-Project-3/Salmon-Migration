@@ -17,6 +17,7 @@ public class FishAmountController : MonoBehaviour {
 	private int secondsPerWave = 30;
 	private int secondsUntilNextWave;
 	public int waveNum = 0;
+	public bool billboardVisible;
 	// Use this for initialization
 	void Start () {
 		previousState = new WaveState ();
