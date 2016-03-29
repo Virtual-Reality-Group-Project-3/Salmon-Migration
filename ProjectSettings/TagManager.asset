@@ -10,6 +10,7 @@ TagManager:
   - fish from school
   - ladderstep
   - fish controller
+  - Interactive Car
   layers:
   - Default
   - TransparentFX
