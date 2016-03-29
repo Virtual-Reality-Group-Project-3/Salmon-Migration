@@ -63,8 +63,12 @@ public class LadderClimberC : MonoBehaviour {
 			}
 			//obj.transform.
 			rotateObjectIntoCurrent(obj);
+			//new
+			obj.GetComponent<Rigidbody>().AddForce(movementVector*speed*4);
+
+
 			//Move it forward here
-			obj.transform.Translate(movementVector,Space.World);
+			// obj.transform.Translate(movementVector,Space.World); //old
 			//Debug.Log (selfTransform.forward + "    " + obj.transform.forward);
 
 
