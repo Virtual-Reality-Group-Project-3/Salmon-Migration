@@ -64,7 +64,7 @@ public class LadderClimberC : MonoBehaviour {
 			//obj.transform.
 			rotateObjectIntoCurrent(obj);
 			//new
-			obj.GetComponent<Rigidbody>().AddForce(movementVector*speed*4);
+			obj.GetComponent<Rigidbody>().AddForce(movementVector*speed*3);
 
 
 			//Move it forward here

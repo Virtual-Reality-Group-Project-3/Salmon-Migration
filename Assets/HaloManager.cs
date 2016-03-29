@@ -21,7 +21,7 @@ public class HaloManager : MonoBehaviour {
 			halo.GetType().GetProperty("enabled").SetValue(halo, false, null);
 
 		}
-		if (fishController.waveNum >= 8) {
+		if (fishController.waveNum - waveNum >= 8) {
 			Destroy (this);
 		}
 	}
