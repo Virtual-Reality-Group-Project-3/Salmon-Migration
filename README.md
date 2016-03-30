@@ -16,6 +16,13 @@ The user can look through binoculars in order to get a closer view of the fish, 
 
 ## Non-Student Created Assets
 ### Audio
+| Title | Author | Source |
+| --- | --- | --- |
+| Boat Motor sound effect | SFX Guy | https://www.youtube.com/watch?v=wy480O0uRJE |
+| Classic Kitchen Timer (Sound Effect) | William Higgins | https://www.youtube.com/watch?v=iYsjukznN8E |
+| fish splash water sound | iFalution jan | https://www.youtube.com/watch?v=s1nTz5g42Rs |
+| Insert Coin Sound Effect | 9VoltNintendo | https://www.youtube.com/watch?v=-XmVcb3TNDs |
+| water drop, water plot Sound Effect | Selected Sound Effects | https://www.youtube.com/watch?v=POV3Y-ryrN4 |
 
 ### Models
 | Title | Author | Source |
