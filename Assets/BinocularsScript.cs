@@ -9,6 +9,8 @@ public class BinocularsScript : MonoBehaviour {
 	private bool havePlayer=false;
 	public AudioClip tickingSound;
 	public AudioClip coinDropSound;
+	public float volume_coin=1;
+	public float volume_tick=1;
 
 
 
@@ -38,6 +40,7 @@ public class BinocularsScript : MonoBehaviour {
 	private void StartSound()
 	{
 		tickingAudio = SetUpAudioSource(tickingSound);
+		coinDropAudio = SetUpAudioSource (coinDropSound);
 	}
 
 	void toggleBinoView(bool toggle) {
@@ -73,6 +76,8 @@ public class BinocularsScript : MonoBehaviour {
 			if (CrossPlatformInputManager.GetButtonDown ("X Button") || Input.GetKeyDown ("f")) {
 				toggleBinoView (!inBinoView);
 			}
+			coinDropAudio.volume = volume_coin;
+			tickingAudio.volume = volume_tick;
 		}
 	}
 }
