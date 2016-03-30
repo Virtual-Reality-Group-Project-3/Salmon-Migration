@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using Random = UnityEngine.Random;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -8,6 +9,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
+		private AudioSource m_AudioSource;
+		[SerializeField] private AudioClip[] m_FootstepSounds;
         [Serializable]
         public class MovementSettings
         {
@@ -116,15 +119,52 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #endif
             }
         }
-
-
+		private Rigidbody m_CharacterController;
+		private float m_StepCycle;
+		private float m_NextStep;
+		private float m_StepInterval;
         private void Start()
         {
+			m_StepInterval = 100f;
+			m_CharacterController = GetComponent<Rigidbody>();
+			m_AudioSource = GetComponent<AudioSource>();
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
             mouseLook.Init (transform, cam.transform);
+			m_StepCycle = 0f;
         }
+		private void PlayFootStepAudio()
+		{
+			if (!Grounded)
+			{
+				return;
+			}
+			// pick & play a random footstep sound from the array,
+			// excluding sound at index 0
+			int n = Random.Range(1, m_FootstepSounds.Length);
+			m_AudioSource.clip = m_FootstepSounds[n];
+			m_AudioSource.PlayOneShot(m_AudioSource.clip);
+			// move picked sound to index 0 so it's not picked next time
+			m_FootstepSounds[n] = m_FootstepSounds[0];
+			m_FootstepSounds[0] = m_AudioSource.clip;
+		}
+		private void ProgressStepCycle(float speed)
+		{
+			if (m_CharacterController.velocity.sqrMagnitude > 0)
+			{
+				m_StepCycle += (m_CharacterController.velocity.magnitude + (speed)*
+					Time.fixedDeltaTime);
+			}
 
+			if (!(m_StepCycle > m_NextStep))
+			{
+				return;
+			}
+
+			m_NextStep = m_StepCycle + m_StepInterval;
+
+			PlayFootStepAudio();
+		}
 
         private void Update()
         {
@@ -184,6 +224,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
             m_Jump = false;
+			ProgressStepCycle(0.001f);
         }
 
 
