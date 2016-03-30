@@ -2637,8 +2637,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158355749}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 352.28, y: 36.82, z: 287.38}
+  m_LocalRotation: {x: 0.24286334, y: 0.47370085, z: 0.13761324, w: -0.8352769}
+  m_LocalPosition: {x: 389.9978, y: 7.87204, z: 276.49258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3324,7 +3324,7 @@ MonoBehaviour:
   otherEnabled: 1
   displayHUD: 0
   schoolToCopy: {fileID: 100000, guid: efffb0cb987d87e4daa1f38c1c4efbd8, type: 2}
-  secondsPerWave: 10
+  secondsPerWave: 30
   waveNum: 0
   billboardVisible: 0
 --- !u!4 &201960968
@@ -36198,8 +36198,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2142817860}
-  m_LocalRotation: {x: 0.15511651, y: 0.6515167, z: 0.13838373, w: -0.7295991}
-  m_LocalPosition: {x: 309.84146, y: 80.88677, z: 257.6911}
+  m_LocalRotation: {x: 0.24286334, y: 0.47370085, z: 0.13761324, w: -0.8352769}
+  m_LocalPosition: {x: 389.9978, y: 41.27204, z: 276.49258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

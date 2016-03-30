@@ -6196,6 +6196,10 @@ MonoBehaviour:
   binoController: {fileID: 172260}
   binoModel: {fileID: 199572}
   player: {fileID: 0}
+  tickingSound: {fileID: 8300000, guid: 5baed4892ed7745419854bad6af80189, type: 3}
+  coinDropSound: {fileID: 8300000, guid: d2fb21e4299f040518cf56b4d9246256, type: 3}
+  volume_coin: 0.1
+  volume_tick: 0.5
 --- !u!114 &11458138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6348,7 +6352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1da370d11a95440b67ed62934e5258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomable: 1
+  alwaysVisible: 0
+  isLarge: 0
 --- !u!136 &13614758
 CapsuleCollider:
   m_ObjectHideFlags: 1

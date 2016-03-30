@@ -21,26 +21,20 @@ public class BinocularsScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartSound ();
+		tickingAudio = SetUpAudioSource(tickingSound, true);
+		tickingAudio.Play ();
+		coinDropAudio = SetUpAudioSource (coinDropSound, false);
 	}
 
-	private AudioSource SetUpAudioSource(AudioClip clip)
+	private AudioSource SetUpAudioSource(AudioClip clip, bool loop)
 	{
 		// create the new audio source component on the game object and set up its properties
 		AudioSource source = gameObject.AddComponent<AudioSource>();
 
 		source.clip = clip;
 		source.volume = 0;
-		source.loop = true;
-		source.Play ();
-
+		source.loop = loop;
 		return source;
-	}
-
-	private void StartSound()
-	{
-		tickingAudio = SetUpAudioSource(tickingSound);
-		coinDropAudio = SetUpAudioSource (coinDropSound);
 	}
 
 	void toggleBinoView(bool toggle) {
@@ -50,6 +44,8 @@ public class BinocularsScript : MonoBehaviour {
 		inBinoView = toggle;
 		if (inBinoView) {
 			tickingAudio.volume = 1;
+			coinDropAudio.volume = 1;
+			coinDropAudio.Play ();
 		} else {
 			tickingAudio.volume = 0;
 		}
@@ -76,8 +72,6 @@ public class BinocularsScript : MonoBehaviour {
 			if (CrossPlatformInputManager.GetButtonDown ("X Button") || Input.GetKeyDown ("f")) {
 				toggleBinoView (!inBinoView);
 			}
-			coinDropAudio.volume = volume_coin;
-			tickingAudio.volume = volume_tick;
 		}
 	}
 }
