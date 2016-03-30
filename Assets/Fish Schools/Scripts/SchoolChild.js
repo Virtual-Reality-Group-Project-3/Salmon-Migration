@@ -129,7 +129,7 @@ function RandomizeStartAnimationFrame(){
 
 function GetStartPos(){
 	//-Vector is to avoid zero rotation warning
-	_cacheTransform.position = _wayPoint - Vector3(.1,.1,.1);
+	_cacheTransform.position = new Vector3(140f, 41.6f, 181.5f);
 }
 
 function findWaypoint():Vector3{

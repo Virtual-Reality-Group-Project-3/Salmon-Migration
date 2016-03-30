@@ -7,8 +7,8 @@ public class BillboardController : MonoBehaviour {
 	private TimeLord timeLord;
 	private CanvasRenderer cr;
 	private Text t;
-	public bool zoomable;
 	public bool alwaysVisible;
+	public bool isLarge;
 	// Use this for initialization
 	void Start () {
 		fishControl = (FishAmountController) FindObjectOfType(typeof(FishAmountController));
@@ -18,27 +18,30 @@ public class BillboardController : MonoBehaviour {
 		if (!alwaysVisible) {
 			cr.SetAlpha (0);
 		}
-		if (zoomable) {
-			Debug.Log ("Zoomable text not supported");
-			this.enabled = false;
-		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
+		if (isLarge) {
+			if (Camera.main == null) {
+				fishControl.billboardVisible = false;
+			} else {
+				Vector3 screenPoint = Camera.main.WorldToViewportPoint (this.transform.position);
+				if (screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1) {
+					fishControl.billboardVisible = true;
+				} else {
+					fishControl.billboardVisible = false;
+				}
+			}
+		}
 		if (!alwaysVisible) {
-			if (fishControl.displayHUD || timeLord.timeChanged) {
+			if (!fishControl.billboardVisible && (fishControl.displayHUD || timeLord.timeChanged)) {
 				CancelInvoke ("FadeOut");
 				cr.SetAlpha (1);
 			} else {
 				Invoke ("FadeOut", 2);
 			}
 		}
-		/**
-		if (zoomable) {
-			transform.position = Camera.main.ScreenToWorldPoint (new Vector3 (Screen.width / 2, Screen.height / 2, 20));
-		}
-		**/
 		t.text = string.Format("CURRENT WAVE\n{0}\nNEXT WAVE\n{1}, {2}x", fishControl.GetPreviousState(), fishControl.GetCurrentState(), timeLord.timeScale);
 	}
 	private void FadeOut() {

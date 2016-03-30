@@ -21,59 +21,50 @@ public class BinocularsScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
-
+		tickingAudio = SetUpAudioSource(tickingSound, true);
+		coinDropAudio = SetUpAudioSource (coinDropSound, false);
+		tickingAudio.volume = volume_tick;
+		coinDropAudio.volume = volume_coin;
 	}
 
-	private AudioSource SetUpAudioSource(AudioClip clip)
+	private AudioSource SetUpAudioSource(AudioClip clip, bool loop)
 	{
 		// create the new audio source component on the game object and set up its properties
 		AudioSource source = gameObject.AddComponent<AudioSource>();
 
 		source.clip = clip;
 		source.volume = 0;
-		source.Play ();
-		if (source == tickingAudio) {
-			source.loop = true;
-		} else {
-			source.loop = false;
-		}
-
+		source.loop = loop;
 		return source;
 	}
 
-	private void StartSound()
-	{
-		tickingAudio = SetUpAudioSource(tickingSound);
-		coinDropAudio = SetUpAudioSource (coinDropSound);
-	}
-
 	void toggleBinoView(bool toggle) {
-		StartSound ();
 		binoController.SetActive ( toggle);
 		binoModel.SetActive (!toggle);
 		player.GetComponent<TogglePlayer> ().toggle (!toggle);
 		inBinoView = toggle;
-
+		if (inBinoView) {
+			coinDropAudio.Play ();
+			Invoke ("StartTicking", coinDropSound.length);
+		} else {
+			CancelInvoke ("StartTicking");
+			tickingAudio.Stop ();
+		}
 	}
-
+	void StartTicking() {
+		tickingAudio.Play ();
+	}
 	void OnTriggerEnter(Collider other) {
-
-
-		
 		if (other.gameObject.CompareTag ("Player")) {
 			havePlayer = true;
 			player = other.gameObject;
 		}
-
-
 	}
 	void OnTriggerExit(Collider other) {
 
 		if (other.gameObject.CompareTag ("Player")) {
 			havePlayer = false;
 			player = null;
-
 		}
 	}
 
@@ -89,9 +80,6 @@ public class BinocularsScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
-
-
 		if (havePlayer) {
 
 			coinDropAudio.volume = volume_coin;
@@ -99,10 +87,7 @@ public class BinocularsScript : MonoBehaviour {
 
 			if (CrossPlatformInputManager.GetButtonDown ("X Button") || Input.GetKeyDown ("f")) {
 				toggleBinoView (!inBinoView);
-
 			}
-
-		} 
-
+		}
 	}
 }

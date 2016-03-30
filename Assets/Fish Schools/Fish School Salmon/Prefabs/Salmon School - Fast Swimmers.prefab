@@ -82,8 +82,8 @@ MonoBehaviour:
   _spawnSphereDepth: 5
   _spawnSphereHeight: 5
   _childSpeedMultipler: 0.71
-  _minSpeed: 7
-  _maxSpeed: 16.74
+  _minSpeed: 12
+  _maxSpeed: 14
   _speedCurveMultiplier:
     serializedVersion: 2
     m_Curve:

@@ -12,16 +12,21 @@ public class FishAmountController : MonoBehaviour {
 	public bool otherEnabled = true;
 	public bool displayHUD = false;
 	public GameObject schoolToCopy;
-	private GameObject school = null;
+	private Object school = null;
 	private WaveState previousState = null;
-	private int secondsPerWave = 30;
+	public int secondsPerWave = 30;
 	private int secondsUntilNextWave;
 	public int waveNum = 0;
+	public bool billboardVisible;
+	private Vector3 spawnPos; //unity suk
 	// Use this for initialization
 	void Start () {
 		previousState = new WaveState ();
 		secondsUntilNextWave = secondsPerWave;
 		InvokeRepeating ("DecrementTime", 0, 1);
+		spawnPos = new Vector3(this.transform.position.x, 
+							   this.transform.position.y, 
+							   this.transform.position.z);
 	}
 	void Update() {
 		bool changingValues = false;
@@ -49,7 +54,7 @@ public class FishAmountController : MonoBehaviour {
 		if (school != null) {
 			Destroy (school);
 		}
-		school = Instantiate (schoolToCopy);
+		school = Instantiate (schoolToCopy, spawnPos, this.transform.rotation);
 		previousState = new WaveState (GetCurrentYear (), chinookEnabled, otherEnabled);
 	}
 

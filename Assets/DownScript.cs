@@ -35,6 +35,11 @@ public class DownScript : MonoBehaviour {
 
 	public void Update() {
 		foreach (GameObject obj in ignoreCollisions) {
+			if (!obj) {
+				removeList.Add (obj);
+				continue;
+				//Continue on if null, and remove
+			}
 			if (obj.transform.position.y < selfTransform.position.y) {
 				Physics.IgnoreCollision (obj.GetComponent<Collider>(), selfCollider, false);
 				removeList.Add (obj);
