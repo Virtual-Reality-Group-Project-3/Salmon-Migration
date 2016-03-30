@@ -19,8 +19,7 @@ public class BinocularsScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
-
+		StartSound ();
 	}
 
 	private AudioSource SetUpAudioSource(AudioClip clip)
@@ -41,47 +40,38 @@ public class BinocularsScript : MonoBehaviour {
 	}
 
 	void toggleBinoView(bool toggle) {
-		StartSound ();
 		binoController.SetActive ( toggle);
 		binoModel.SetActive (!toggle);
 		player.GetComponent<TogglePlayer> ().toggle (!toggle);
 		inBinoView = toggle;
-
+		if (inBinoView) {
+			tickingAudio.volume = 1;
+		} else {
+			tickingAudio.volume = 0;
+		}
 	}
 
 	void OnTriggerEnter(Collider other) {
-
-
-		
 		if (other.gameObject.CompareTag ("Player")) {
 			havePlayer = true;
 			player = other.gameObject;
 		}
-
-
 	}
 	void OnTriggerExit(Collider other) {
 
 		if (other.gameObject.CompareTag ("Player")) {
 			havePlayer = false;
 			player = null;
-
 		}
 	}
 
 
 	// Update is called once per frame
 	void Update () {
-		
-
-
 		if (havePlayer) {
 			if (CrossPlatformInputManager.GetButtonDown ("X Button") || Input.GetKeyDown ("f")) {
 				toggleBinoView (!inBinoView);
-
 			}
-			tickingAudio.volume = 1;
 		}
-
 	}
 }
