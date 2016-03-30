@@ -33,6 +33,11 @@ public class BinocularsScript : MonoBehaviour {
 		source.clip = clip;
 		source.volume = 0;
 		source.Play ();
+		if (source == tickingAudio) {
+			source.loop = true;
+		} else {
+			source.loop = false;
+		}
 
 		return source;
 	}
@@ -72,6 +77,15 @@ public class BinocularsScript : MonoBehaviour {
 		}
 	}
 
+	private void StopSound()
+	{
+		//Destroy all audio sources on this object:
+		foreach (var source in GetComponents<AudioSource>())
+		{
+			Destroy(source);
+		}
+	}
+
 
 	// Update is called once per frame
 	void Update () {
@@ -79,13 +93,16 @@ public class BinocularsScript : MonoBehaviour {
 
 
 		if (havePlayer) {
+
+			coinDropAudio.volume = volume_coin;
+			tickingAudio.volume = volume_tick;
+
 			if (CrossPlatformInputManager.GetButtonDown ("X Button") || Input.GetKeyDown ("f")) {
 				toggleBinoView (!inBinoView);
 
 			}
-			coinDropAudio.volume = volume_coin;
-			tickingAudio.volume = volume_tick;
-		}
+
+		} 
 
 	}
 }

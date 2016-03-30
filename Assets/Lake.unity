@@ -2869,7 +2869,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 177533419}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 352.61813, y: 3.5449753, z: 305.0392}
+  m_LocalPosition: {x: 348.43262, y: 7.1329727, z: 286.65182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7774,7 +7774,7 @@ Prefab:
     - target: {fileID: 11444938, guid: 5e417497a3f5c5b4f927b7e9d1f0cc09, type: 2}
       propertyPath: tickingSound
       value: 
-      objectReference: {fileID: 8300000, guid: 5baed4892ed7745419854bad6af80189, type: 3}
+      objectReference: {fileID: 8300000, guid: 24b3996020e2c4909a7c15d202f702ae, type: 3}
     - target: {fileID: 11444938, guid: 5e417497a3f5c5b4f927b7e9d1f0cc09, type: 2}
       propertyPath: coinDropSound
       value: 
@@ -7782,6 +7782,14 @@ Prefab:
     - target: {fileID: 11444938, guid: 5e417497a3f5c5b4f927b7e9d1f0cc09, type: 2}
       propertyPath: volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444938, guid: 5e417497a3f5c5b4f927b7e9d1f0cc09, type: 2}
+      propertyPath: volume_coin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444938, guid: 5e417497a3f5c5b4f927b7e9d1f0cc09, type: 2}
+      propertyPath: volume_tick
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e417497a3f5c5b4f927b7e9d1f0cc09, type: 2}
@@ -17504,7 +17512,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1146672529}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 43.768986, y: -838.5047, z: 199.42961}
+  m_LocalPosition: {x: 348.43262, y: 40.532974, z: 286.65182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -28011,7 +28019,7 @@ Prefab:
     - target: {fileID: 11444938, guid: 5e417497a3f5c5b4f927b7e9d1f0cc09, type: 2}
       propertyPath: tickingSound
       value: 
-      objectReference: {fileID: 8300000, guid: 5baed4892ed7745419854bad6af80189, type: 3}
+      objectReference: {fileID: 8300000, guid: 24b3996020e2c4909a7c15d202f702ae, type: 3}
     - target: {fileID: 11444938, guid: 5e417497a3f5c5b4f927b7e9d1f0cc09, type: 2}
       propertyPath: coinDropSound
       value: 
