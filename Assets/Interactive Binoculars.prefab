@@ -6196,7 +6196,7 @@ MonoBehaviour:
   binoController: {fileID: 172260}
   binoModel: {fileID: 199572}
   player: {fileID: 0}
-  tickingSound: {fileID: 8300000, guid: 5baed4892ed7745419854bad6af80189, type: 3}
+  tickingSound: {fileID: 8300000, guid: 24b3996020e2c4909a7c15d202f702ae, type: 3}
   coinDropSound: {fileID: 8300000, guid: d2fb21e4299f040518cf56b4d9246256, type: 3}
   volume_coin: 0.1
   volume_tick: 0.5

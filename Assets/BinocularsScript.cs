@@ -43,8 +43,8 @@ public class BinocularsScript : MonoBehaviour {
 		player.GetComponent<TogglePlayer> ().toggle (!toggle);
 		inBinoView = toggle;
 		if (inBinoView) {
-			tickingAudio.volume = 1;
-			coinDropAudio.volume = 1;
+			tickingAudio.volume = volume_tick;
+			coinDropAudio.volume = volume_coin;
 			coinDropAudio.Play ();
 		} else {
 			tickingAudio.volume = 0;
