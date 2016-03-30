@@ -23,11 +23,15 @@ public class BillboardController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isLarge) {
-			Vector3 screenPoint = Camera.main.WorldToViewportPoint (this.transform.position);
-			if (screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1) {
-				fishControl.billboardVisible = true;
-			} else {
+			if (Camera.main == null) {
 				fishControl.billboardVisible = false;
+			} else {
+				Vector3 screenPoint = Camera.main.WorldToViewportPoint (this.transform.position);
+				if (screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1) {
+					fishControl.billboardVisible = true;
+				} else {
+					fishControl.billboardVisible = false;
+				}
 			}
 		}
 		if (!alwaysVisible) {

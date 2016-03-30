@@ -29,6 +29,7 @@ public class BinocularsScript : MonoBehaviour {
 
 		source.clip = clip;
 		source.volume = 0;
+		source.loop = true;
 		source.Play ();
 
 		return source;

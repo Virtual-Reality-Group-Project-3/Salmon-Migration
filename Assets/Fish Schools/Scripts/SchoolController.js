@@ -74,12 +74,12 @@ public var _updateCounter:int;
 public var _activeChildren:int;
 
 //CUSTOM
-private var waypoint:GameObject = null;
 private var fc:FishAmountController;
-
+private var spawnPos:Vector3;
 
 function Start () {
 	fc = FindObjectOfType(typeof(FishAmountController));
+	spawnPos = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
 	_posBuffer = transform.position + _posOffset;
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
 	_childAmount = fc.numFishPerSchool[fc.yearsFromStart];
@@ -124,7 +124,7 @@ function AddFish(amount:int, type:int){
 }
 
 function instantiateFish(fishPos:int) {
-	var obj : SchoolChild = Instantiate(_childPrefab[fishPos]);
+	var obj : SchoolChild = Instantiate(_childPrefab[fishPos], spawnPos, this.transform.rotation);
 	if (fishPos == 0) {
 		obj.transform.localScale=Vector3.one*(1+fc.yearsFromStart*.025);	
 	} else {
@@ -167,18 +167,8 @@ function UpdateFishAmount(){
 
 //Set waypoint randomly inside box
 function SetRandomWaypointPosition() {
-	while (!waypoint) {
-		Debug.Log(waypoint);
-		waypoint = GameObject.FindWithTag ("Waypoint");
-	}
 	_schoolSpeed = Random.Range(1 , _childSpeedMultipler);
-	var t:Vector3;
-	/*
-	t.x = Random.Range(-_positionSphere, _positionSphere) + transform.position.x;
-	t.z = Random.Range(-_positionSphereDepth, _positionSphereDepth) + transform.position.z;
-	t.y = Random.Range(-_positionSphereHeight, _positionSphereHeight) + transform.position.y;
-	*/
-	t = waypoint.transform.position;
+	var t:Vector3 = new Vector3(269.9f, 55.16f, 287.98f);
 	_posBuffer = t;	
 	if(_forceChildWaypoints){
 		for (var i:int = 0; i < _roamers.Count; i++) {
