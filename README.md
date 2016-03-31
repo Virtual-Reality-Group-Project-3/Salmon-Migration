@@ -18,6 +18,25 @@ http://www.fpc.org/web/apps/adultsalmon/Q_adultcounts_annualtotalsquery.php
 
 ## Executable and Source Code
 
+## Insight Results
+### Two Major Anticipated Insights
+1. The size of the Chinook increases over time
+2. Proportion of population that is Chinook decreases over time
+### Participant Results
+| Participant | What They Know | Insights Gained After Experience |
+| --- | --- | --- |
+| 1 | They are fish | It looks like over the years, there have become more and more Common salmon compared to Chinook salmon |
+| 2 | Nothing | Common got smaller, and there were a lot more of them. Chinook got larger, and there were fewer of them |
+| 3 | Nothing | In more recent times, there are more Common ones, and they are smaller |
+### Accuracy of Predictions
+Our predictions were accurate - the participants were able to determine the size changes of the salmon species, along with the corresponding decrease in numbers of Chinook and the increase in numbers of Common. We think this is because we focused on the insights that would be most clear to someone unfamiliar with the data, and available from taking the binoculars and viewing the most interesting part of the experience, the fish spawning and swimming up the ladder and zooming in on the schools of fish.
+## Simulator Sickness Results
+| Participant | Math | SSQ Score |
+| --- | --- | --- |
+| 1 | (1 * 9.54 + 4 * 7.58 + 2 * 13.92) * 3.74 | 253.20 |
+| 2 | (0 * 9.54 + 1 * 7.58 + 1 * 13.92) * 3.74 | 80.41 |
+| 3 | (3 * 9.54 + 3 * 7.58 + 2 * 13.92) * 3.74 | 292.21 |
+Average: 208.61
 ## Non-Student Created Assets
 ### Audio
 | Title | Author | Source |
