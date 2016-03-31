@@ -42,7 +42,7 @@ public class BillboardController : MonoBehaviour {
 				Invoke ("FadeOut", 2);
 			}
 		}
-		t.text = string.Format("CURRENT WAVE\n{0}\nNEXT WAVE\n{1}, {2}x", fishControl.GetPreviousState(), fishControl.GetCurrentState(), timeLord.timeScale);
+		t.text = string.Format("CURRENT WAVE\n{0}\nNEXT WAVE\n{1}, {2}x speed", fishControl.GetPreviousState(), fishControl.GetCurrentState(), timeLord.timeScale);
 	}
 	private void FadeOut() {
 		cr.SetAlpha (cr.GetAlpha() - 0.01f);

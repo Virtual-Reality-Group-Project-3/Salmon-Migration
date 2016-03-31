@@ -82,7 +82,7 @@ public class FishAmountController : MonoBehaviour {
 	}
 
 	public string GetCurrentState() {
-		return string.Format("{0}{1}{2}\n{3}s", GetCurrentYear(), chinookEnabled ? " CHINOOK" : "                 ", otherEnabled ? " OTHER" : "", secondsUntilNextWave);
+		return string.Format("{0}{1}{2}\n{3}s", GetCurrentYear(), chinookEnabled ? " CHINOOK" : "                 ", otherEnabled ? " COMMON" : "", secondsUntilNextWave);
 	}
 }
 
@@ -104,7 +104,7 @@ class WaveState {
 	}
 	public override string ToString() {
 		if (enabled) {
-			return string.Format ("{0}{1}{2}", year, chinookEnabled ? " CHINOOK" : "                 ", otherEnabled ? " OTHER" : "");
+			return string.Format ("{0}{1}{2}", year, chinookEnabled ? " CHINOOK" : "                 ", otherEnabled ? " COMMON" : "");
 		} else {
 			return "N/A";
 		}
