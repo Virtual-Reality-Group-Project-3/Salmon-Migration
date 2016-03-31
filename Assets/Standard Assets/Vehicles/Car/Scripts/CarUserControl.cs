@@ -26,6 +26,7 @@ namespace UnityStandardAssets.Vehicles.Car
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
+			v = Math.Max(0,v); //Stop reversing!
 			if (Math.Abs(v) > 0 && !boatAudio.isPlaying) {
 				boatAudio.Play ();
 				boatAudio.volume = 1f;
@@ -40,6 +41,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
+
             m_Car.Move(h, v, v, handbrake);
 #else
             m_Car.Move(h, v, v, 0f);
