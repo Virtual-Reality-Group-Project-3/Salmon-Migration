@@ -7,18 +7,26 @@ public class LadderClimberC : MonoBehaviour {
     public float speed = 1;
 	public bool disableGravityUponEnter = true;
 	public float rotationSpeed = .8f;
+	private bool isPlayingSplash = false;
+	public bool splash = false;
 	//Above two vars control how fast the fish bobs arounds in water in this stream;
 	public HashSet<GameObject> salmonSet = new HashSet<GameObject> ();
 
 	public bool invertDirection = false;
 
     public void Start() {
+		
 		selfTransform = this.GetComponent<Transform>();
     }
     public void OnTriggerEnter(Collider collider) {
 		//Debug.Log ("Entered " + collider.gameObject.name + " Tagged with " + collider.gameObject.tag);
 		if (collider.gameObject.CompareTag ("salmon")) {
 			salmonSet.Add (collider.gameObject);
+			if (!collider.gameObject.GetComponent<AudioSource>().isPlaying && !isPlayingSplash && splash && collider.gameObject.GetComponent<TimeVal>().time < 0 && CurrentSplashesPlaying.splashes < 0) {
+				collider.gameObject.GetComponent<AudioSource> ().Play();
+				collider.gameObject.GetComponent<TimeVal> ().time = 5f;
+				CurrentSplashesPlaying.splashes = 2f; //Limit splashes to one per second
+			}
 			if (disableGravityUponEnter) {
 				collider.gameObject.GetComponent<Rigidbody> ().useGravity = false;
 			}
@@ -56,8 +64,10 @@ public class LadderClimberC : MonoBehaviour {
 		if (invertDirection) {
 			movementVector = -movementVector;
 		}
-
+		isPlayingSplash = false;
 		foreach ( GameObject obj in salmonSet ) {
+			//isPlayingSplash = isPlayingSplash || obj.GetComponent<AudioSource> ().isPlaying;
+			obj.GetComponent<TimeVal> ().time -= Time.deltaTime;
 			if (disableGravityUponEnter) {
 				obj.GetComponent<Rigidbody> ().useGravity = false;
 			}
