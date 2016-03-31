@@ -2945,8 +2945,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 177533419}
-  m_LocalRotation: {x: -0.20102255, y: 0.31388366, z: 0.06818226, w: 0.9254286}
-  m_LocalPosition: {x: 313.8858, y: 15.765984, z: 280.2014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 352.40997, y: 36.32, z: 294.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3466,6 +3466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96468c245ae8e0d4f8f1c7a7b8b0542e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boatAudio: {fileID: 0}
 --- !u!54 &202477729
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17624,8 +17625,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1146672529}
-  m_LocalRotation: {x: -0.20102255, y: 0.31388366, z: 0.06818226, w: 0.9254286}
-  m_LocalPosition: {x: 313.8858, y: 49.165985, z: 280.2014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 352.40997, y: 69.72, z: 294.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27243,7 +27244,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400074, guid: 92d3bf54d5ce6c04cb0b99d0c71adc6b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.68
+      value: -2.47
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 92d3bf54d5ce6c04cb0b99d0c71adc6b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27251,7 +27252,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 92d3bf54d5ce6c04cb0b99d0c71adc6b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.48
+      value: -111.2
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: 92d3bf54d5ce6c04cb0b99d0c71adc6b, type: 3}
       propertyPath: m_LocalRotation.x
