@@ -13,6 +13,7 @@ public class ToggleCar : MonoBehaviour {
 		camera.SetActive (toggle);
 		if (!toggle) {
 			this.GetComponent<CarController> ().Move (0f, 0f, 0f, handBrakeVal);
+			this.GetComponent<CarUserControl> ().boatAudio.Stop ();
 		}
 		this.GetComponent<CarUserControl> ().enabled = toggle;
 

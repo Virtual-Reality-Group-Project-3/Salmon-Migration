@@ -7,7 +7,7 @@ namespace UnityStandardAssets.Vehicles.Car
     [RequireComponent(typeof (CarController))]
     public class CarUserControl : MonoBehaviour
     {
-		AudioSource boatAudio;
+		public AudioSource boatAudio;
 		void Start() {
 			boatAudio = GetComponent<AudioSource> ();
 		}
@@ -28,10 +28,12 @@ namespace UnityStandardAssets.Vehicles.Car
             float v = CrossPlatformInputManager.GetAxis("Vertical");
 			if (Math.Abs(v) > 0 && !boatAudio.isPlaying) {
 				boatAudio.Play ();
-				boatAudio.volume = Math.Abs (v);
 			} else if (v == 0) {
 				boatAudio.Stop ();
 			}
+//			if (boatAudio.isPlaying ()) {
+//				boatAudio.volume = Math.Abs (v);
+//			}
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             m_Car.Move(h, v, v, handbrake);
