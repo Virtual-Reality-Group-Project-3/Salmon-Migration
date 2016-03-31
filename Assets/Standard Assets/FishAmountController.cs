@@ -27,6 +27,7 @@ public class FishAmountController : MonoBehaviour {
 		spawnPos = new Vector3(this.transform.position.x, 
 							   this.transform.position.y, 
 							   this.transform.position.z);
+		SpawnSchool ();
 	}
 	void Update() {
 		bool changingValues = false;
