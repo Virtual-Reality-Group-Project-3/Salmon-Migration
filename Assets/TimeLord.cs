@@ -19,6 +19,13 @@ public class TimeLord : MonoBehaviour {
 		bool increase = false;
 		bool decrease = false;
 		float currentDpad = CrossPlatformInputManager.GetAxis ("TimeScaleControls");
+		float reset = CrossPlatformInputManager.GetAxis ("TimeResetAxis");
+		if (reset == 1) {
+			timeScale = 1;
+			Time.timeScale = 1;
+			timeChanged = true;
+			return;
+		}
 		if (currentDpad != previousDpad) {
 			if (currentDpad == 1) {
 				increase = true;
