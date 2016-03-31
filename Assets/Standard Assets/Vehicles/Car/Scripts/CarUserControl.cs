@@ -28,12 +28,16 @@ namespace UnityStandardAssets.Vehicles.Car
             float v = CrossPlatformInputManager.GetAxis("Vertical");
 			if (Math.Abs(v) > 0 && !boatAudio.isPlaying) {
 				boatAudio.Play ();
+				boatAudio.volume = 1f;
+				//Don't set volume to v inside this block!
 			} else if (v == 0) {
-				boatAudio.Stop ();
+				if (boatAudio.volume > .1f) {
+					boatAudio.volume -= .1f;
+				} else {
+					boatAudio.Stop ();
+				}
 			}
-//			if (boatAudio.isPlaying ()) {
-//				boatAudio.volume = Math.Abs (v);
-//			}
+
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             m_Car.Move(h, v, v, handbrake);
@@ -41,5 +45,12 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Car.Move(h, v, v, 0f);
 #endif
         }
+
+
+
+
     }
+
+
+
 }
